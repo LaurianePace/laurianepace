@@ -1,0 +1,150 @@
+/* ==================================================
+   EN-TÊTE
+================================================== */
+
+header {
+    margin: 0 auto;
+}
+header {
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.25rem;
+    padding: 1rem 0;
+}
+.navbar { 
+	position: static;
+}
+
+.logo {
+    height: 4rem;
+    width: auto;
+}
+
+/* ===== Buttons & Icons ===== */
+
+.navbar-toggler, 
+.social-link, 
+.tool-icon {
+    display: block;
+    border: none;
+    border-radius: 0.75rem;
+    padding: 0;
+    height: 3rem;
+    width: 3rem;
+}
+
+.navbar-toggler, 
+.social-link {
+    background-color: var(--color-primary);
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--color-dark);
+    }
+}
+
+/* ===== Nav links ===== */
+
+.nav-item:not(:has(.button)) {
+    width: 100%;
+}
+
+.nav-list {
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--color-dark);
+    display: block;
+
+    &:hover {
+        text-decoration: solid;
+        text-underline-offset: 0.5rem;
+        text-decoration-line: underline;
+    }
+}
+
+.external::after {
+    content: "";
+    mask: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8" standalone="no"%3F><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;"><g transform="matrix(1.76772,0,0,1.76772,-9.21266,-9.21266)"><path d="M6.343,17.657L17.657,6.343M17.657,6.343L17.657,16.243M17.657,6.343L7.757,6.343" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:1.98px;"/></g></svg>');
+    background-color: currentColor;
+    mask-size: cover;
+    width: 0.625rem;
+    height: 0.625rem;
+    display: inline-block;
+    margin-left: 0.5rem;
+    transition: transform 400ms ease;
+}
+
+.external:hover::after {
+    transform: rotate(45deg);
+}
+
+.navbar-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    margin-top: 1.5rem;
+
+    /* Close */
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 250ms ease;
+}
+
+/* Open */
+.navbar.open .navbar-menu {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    border-radius: var(--rounded-card);
+    padding: 1.5rem;
+    margin: 1.5rem;
+    gap: 0.5rem;
+}
+
+/* ===== Responsive ===== */
+
+@media (min-width: 48rem) {
+    .nav-item:not(:has(.button)) {
+        width: auto;
+    }
+
+    .navbar-menu {
+        position: static;
+        opacity: 1;
+        transform: none;
+        visibility: visible;
+        pointer-events: auto;
+        margin-top: 0;
+    }
+
+	.navbar-toggler {
+		display: none;
+	}
+
+	.nav-list {
+        flex-direction: row;
+        gap: 0.5rem;
+        align-items: center;
+        background: none;
+        padding: 0;
+        margin: 0;
+	}
+}

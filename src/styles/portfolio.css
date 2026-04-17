@@ -1,0 +1,49 @@
+/* ==================================================
+   PORTFOLIO
+================================================== */
+
+.meta {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0 2rem;
+}
+
+.badge {
+    padding: 0.25rem 0.75rem;
+    color: white;
+    background-color: var(--color-secondary);
+    border-radius: var(--full-radius);
+    font-size: var(--text-xs);
+}
+
+.thumbnail {
+    border-radius: var(--rounded-card);
+    max-width: 100%;
+}
+
+.work > article:not(:first-child) {
+    padding-top: 10rem; /* 160px */
+}
+
+.project-desc {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--rounded-card);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-column: 1 / -1;
+
+    h3 {
+        font-weight: 600;
+    }
+}
+
+/* ===== Responsive ===== */
+
+@media (min-width: 64rem) {
+    .project-desc {
+        grid-column: span 2 / span 2;
+    }
+}

@@ -1,0 +1,52 @@
+/* ==================================================
+   PIED DE PAGE
+================================================== */
+
+footer {
+    margin: 0 auto;
+}
+
+.socials {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    background-color: var(--color-light);
+    padding-bottom: 3rem;
+	padding-left: 0;
+	margin: 0;
+	list-style: none;
+}
+
+footer {
+    margin: 0 -1rem;
+    background-color: var(--color-secondary);
+}
+
+.legals {
+    text-align: center;
+    color: white !important;
+    padding: 1rem 0;
+
+    p {
+        margin: 0;
+
+        a {
+            color: white;
+        }
+    }
+}
+
+/* ===== Responsive ===== */
+
+@media (min-width: 40rem) {
+    footer {
+        margin: 0 -2rem;
+    }
+
+    .socials {
+        gap: 1.5rem;
+    }
+}
