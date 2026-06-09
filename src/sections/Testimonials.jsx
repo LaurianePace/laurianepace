@@ -4,11 +4,11 @@ import { useState, useRef, useEffect } from 'react';
 import '../styles/testimonials.css';
 import Testimonial from '../components/Testimonial';
 import fabrice from '../assets/testimonials/fabrice.webp';
-import minh from '../assets/testimonials/minh.webp';
 import goulven from '../assets/testimonials/goulven.webp';
 import paulB from '../assets/testimonials/paul-b.webp';
 import niki from '../assets/testimonials/niki.webp';
 import kevin from '../assets/testimonials/kevin.webp';
+import benoit from '../assets/testimonials/benoit.webp';
 
 function Testimonials() {
     const [expanded, setExpanded] = useState(false);
@@ -52,6 +52,18 @@ function Testimonials() {
             >
                 <div className="testimonials">
                     <Testimonial 
+                        picture={benoit} author="Benoit" details="ExServ"
+                        quote="J'étais ravi de collaborer avec Lauriane qui a parfaitement rempli sa mission qui consistait à réaliser une page web mettant en avant mon activité. N'y connaissant pas grand chose, je me suis reposé sur ses conseils judicieux et même précieux concernant les services d'hébergements, des bonnes pratiques de mise en page, la manière de mettre en avant les informations. Et non contente d'avoir réalisé tout ça en un temps très court, elle m'a partagé une formation simple afin que je puisse prendre en main le contenu du site à l'avenir."
+                    />
+                    <Testimonial 
+                        picture={niki} author="Niki" details="Administrateur&nbsp;| Ludistart"
+                        quote="Lauriane a fait preuve d'écoute lors de l'élaboration du projet, et a proposé des réponses techniques et créatives pertinentes et efficaces. Elle a fait preuve d'initiative quand il le fallait, ce qui était très appréciable. Au plaisir de travailler à nouveau ensemble&nbsp;!"
+                    />
+                    <Testimonial 
+                        author="Éric" details="Trésorier&nbsp;| USAL Cardio-Boxing"
+                        quote="Lauriane a été au-delà de nos attentes&nbsp;! Elle a répondu à nos besoins, a été force de proposition, et a un sens poussé de l’esthétique. À recommander&nbsp;!"
+                    />
+                    <Testimonial 
                         picture={fabrice} author="Fabrice" details="Responsable de production&nbsp;| Plus&nbsp;Que&nbsp;Pro"
                         quote="J’ai eu le plaisir de manager Lauriane chez Plus que pro et la recommande sans hésitation.
                         Lauriane est une collaboratrice fiable et constante, avec un vrai sens du livrable. Elle allie rigueur d’exécution et souci du détail en maintenant un niveau de qualité élevé, y compris dans un environnement contraint avec des délais serrés.
@@ -61,28 +73,15 @@ function Testimonials() {
                         Lauriane est définitivement une collaboratrice solide, impliquée et précieuse dans une équipe."
                     />
                     <Testimonial 
-                        picture={minh} author="Ngoc-Minh" details="Mon&nbsp;CGPI"
-                        quote="Je profite de ce message pour te remercier pour ce que tu as fait pour moi en 2024. 
-                        Ce fut un plaisir et tu as participé aux débuts de l'aventure Mon&nbsp;CGPI&nbsp;!"
-                    />
-                    <Testimonial 
                         picture={goulven} author="Goulven" details="Lead développeur&nbsp;| Enchères&nbsp;Immo"
                         quote="J'ai eu la chance d'encadrer Lauriane pendant deux ans chez Enchères Immo, où elle a contribué au redesign de notre plateforme, amélioré son accessibilité, et optimisé les pages les plus lourdes. Toujours agréable en équipe, intéréssée par les questions de design, Lauriane est proactive et à l'affût de nouveaux projets pour apprendre et se perfectionner. 
                         Je la recommande vivement pour toute équipe recherchant une intégratrice web motivée."
-                    />
-                    <Testimonial 
-                        picture={niki} author="Niki" details="Administrateur&nbsp;| Ludistart"
-                        quote="Lauriane a fait preuve d'écoute lors de l'élaboration du projet, et a proposé des réponses techniques et créatives pertinentes et efficaces. Elle a fait preuve d'initiative quand il le fallait, ce qui était très appréciable. Au plaisir de travailler à nouveau ensemble&nbsp;!"
                     />
                     <Testimonial 
                         picture={paulB} author="Paul" details="Co-fondateur & COO&nbsp;| Enchères&nbsp;Immo"
                         quote="J’ai eu le plaisir de travailler avec Lauriane Pace lors de son passage chez Enchères Immo en tant qu’intégratrice web. Elle a brillamment mené ses projets, contribuant à l’optimisation de notre plateforme avec rigueur et précision.
                         Lauriane se distingue par son souci du détail, et son professionnalisme. Toujours prête à aider, elle a été un véritable atout pour notre équipe.
                         Je la recommande sans réserve pour ses compétences et son attitude positive&nbsp;!"
-                    />
-                    <Testimonial 
-                        author="Éric" details="Trésorier&nbsp;| USAL Cardio-Boxing"
-                        quote="Lauriane a été au-delà de nos attentes&nbsp;! Elle a répondu à nos besoins, a été force de proposition, et a un sens poussé de l’esthétique. À recommander&nbsp;!"
                     />
                     <Testimonial 
                         picture={kevin} author="Kévin" details="Chanteur & guitariste&nbsp;| Feel&nbsp;The&nbsp;Gravity"

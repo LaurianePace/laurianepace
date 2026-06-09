@@ -3,6 +3,11 @@
 import '../styles/portfolio.css';
 import PortfolioArticle from '../components/PortfolioArticle';
 
+// ExServ
+import exserv from '../assets/projects/exserv.webp';
+import exservMobile from '../assets/projects/exserv-mobile.webp';
+import exservWP from '../assets/projects/exserv-wp.webp';
+
 // Ludistart
 import ludistartHP from '../assets/projects/ludistart_v2.webp';
 import ludistartBranding from '../assets/projects/ludistart-branding.webp';
@@ -62,10 +67,32 @@ function Portfolio () {
             <h2 className="section-title">Projets</h2>
             <div className="grid grid-cols-2 work">
                 <PortfolioArticle
+                    title="ExServ"
+                    colSpan2
+                    badges={["WordPress","Webdesign","Intégration"]}
+                    description={
+                        <>
+                            <p>
+                                Benoit Reinier (aka ExServ) est consultant en <span lang="en">game design</span>. À l'occasion d'un événement professionnel, il avait besoin d'un site one-page multilingue pour mettre en avant ses services et toucher une clientèle internationale.
+                            </p>
+                            <p>
+                                Il disposait déjà d'une identité visuelle bien établie, notamment à travers sa chaîne YouTube, incluant des illustrations personnalisées et un univers graphique fort. Mon travail a consisté à m'approprier cet univers pour le transposer fidèlement sur le web, en assurant une cohérence avec ses autres supports.
+                                J'ai conçu et intégré le site sous WordPress en développant un thème enfant Divi 5 sur mesure, pour un site personnalisé, plus accessible et facilement maintenable.
+                            </p>                            
+                        </>
+                    }
+                    images={[
+                        { src: exserv, colSpan: 2 },
+                        { src: exservMobile, colSpan: 2 },
+                        { src: exservWP, colSpan: 2 },
+                    ]}
+                />
+
+                <PortfolioArticle
                     title="Ludistart"
                     rowSpan2
                     colSpan2
-                    badges={["Identité visuelle","WordPress","Webdesign","Design graphique","Community Management"]}
+                    badges={["Identité visuelle","WordPress","Webdesign","Design graphique","Community Management","Intégration"]}
                     description={
                         <>
                             <p>
@@ -168,7 +195,7 @@ function Portfolio () {
                 <PortfolioArticle
                     title="Enchères Immo"
                     colSpan2
-                    badges={["Identité visuelle","WordPress","Webdesign"]}
+                    badges={["UI design","Intégration"]}
                     description={
                         <>
                             <p>
